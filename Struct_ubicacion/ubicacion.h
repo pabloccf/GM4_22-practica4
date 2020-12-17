@@ -3,7 +3,7 @@
 
 #include <string>
 
-struct ubicacion{
+struct Ubicacion{
     std::string localizacion;
     std::string municipio;
     std::string provincia;
