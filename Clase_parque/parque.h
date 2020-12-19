@@ -3,17 +3,30 @@
 
 #include <string>
 #include <vector>
+#include <fstream>
+#include <list>
+
+#include "date.h"
 #include "ubicacion.h"
 #include "ruta.h"
 
-class Ruta{
+class Parque{
     private:
+        std::string nombre_;
         Ubicacion ubicacion_;
         int superficie_;
-        int fecha_declaracion_;
+        date fecha_declaracion_;
         std::vector<Ruta> rutas_;
 
     public:
+        std::string getNombre(){
+            return nombre_;
+        }
+    
+        void setNombre(std::string nombre){
+            nombre_=nombre;
+        }
+        
         Ubicacion getUbicacion(){
             return ubicacion_;
         }
@@ -30,11 +43,11 @@ class Ruta{
             superficie_=superficie;
         }
 
-        int getFecha_declaracion(){
+        date getFecha_declaracion(){
             return fecha_declaracion_;
         }
 
-        void setFecha_declaracion(int fecha_declaracion){
+        void setFecha_declaracion(date fecha_declaracion){
             fecha_declaracion_=fecha_declaracion;
         }
 
