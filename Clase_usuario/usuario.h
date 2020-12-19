@@ -3,19 +3,30 @@
 
 #include <string>
 #include <list>
-#include "usuario.h"
+
+#include "date.h"
 
 class Usuario{
     private:
         std::string nombre_;
         std::string apellido1_;
         std::string apellido2_;
-        std::int dni_;
-        std::int numero_;
-        std::int fecha_;
+        int dni_;
+        int numero_;
+        date fecha_;
         std::string restricciones_;
 
     public:
+        Usuario(std::string nombre="", std::string apellido1="", std::string apellido2="", int dni=0, int numero=0, date fecha={0,0,0}, std::string restricciones=""){
+            nombre_=nombre;
+            apellido1_=apellido1;
+            apellido2_=apellido2;
+            dni_=dni;
+            numero_=numero;
+            fecha_=fecha;
+            restricciones_=restricciones;
+        }
+
         std::string getNombre(){
             return nombre_;
         }
@@ -40,27 +51,35 @@ class Usuario{
             apellido2_=apellido2;
         }
 
-        std::int getDNI(){
+        int getDNI(){
             return dni_;
         }
 
-        void setDNI(std::int dni){
+        void setDNI(int dni){
+            if(dni>99999999 || dni<0){
+                return;
+            }
+
             dni_=dni;
         }
 
-        std::int getNumero(){
+        int getNumero(){
             return numero_;
         }
 
-        void setNumero(std::int numero){
+        void setNumero(int numero){
+            if(numero<0){
+                return;
+            }
+
             numero_=numero;
         }
 
-        std::int getFecha(){
+        date getFecha(){
             return fecha_;
         }
 
-        void setFecha(int fecha){
+        void setFecha(date fecha){
             fecha_=fecha;
         }
 
