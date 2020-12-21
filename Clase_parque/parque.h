@@ -19,6 +19,13 @@ class Parque{
         std::vector<Ruta> rutas_;
 
     public:
+        Parque(std::string nombre="", Ubicacion ubicacion={"", "", ""}, int superficie=0, date fecha_declaracion={0, 0, 0}){
+            nombre_=nombre;
+            ubicacion_=ubicacion;
+            superficie_=superficie;
+            fecha_declaracion_=fecha_declaracion;
+        }
+
         std::string getNombre(){
             return nombre_;
         }
