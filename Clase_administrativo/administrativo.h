@@ -6,9 +6,13 @@
 class Administrativo{
     private:
         std::string usuario_;
-        std::string contraseña_;
+        std::string password_;
 
     public:
+        Administrativo(std::string usuario="", std::string password=""){
+            usuario_=usuario;
+            password_=password;
+        }
         std::string getUsuario(){
             return usuario_;
         }
@@ -17,12 +21,12 @@ class Administrativo{
             usuario_=usuario;
         }
 
-        std::string getContraseña(){
-            return contraseña_;
+        std::string getPassword(){
+            return password_;
         }
 
-        void setContraseña(std::string contraseña){
-            contraseña_=contraseña;
+        void setPassword(std::string password){
+            password_=password;
         }
 };
 
