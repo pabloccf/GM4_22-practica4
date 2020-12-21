@@ -32,7 +32,13 @@ class Monitor{
         inline void setNombre(string nombre){nombre_=nombre;}
         inline void setApellido1(string apellido1){apellido1_=apellido1;}
         inline void setApellido2(string apellido2){apellido2_=apellido2;}
-        inline void setNumero(int numero){numero_=numero;}     //La funcion "set" del numero de telefono cambia puesto que nos queremos asegurar de que tiene 9 digitos.
+        inline void setNumero(int numero){
+            if(numero<0){
+                return;
+            }
+            
+            numero_=numero;
+        }     //La funcion "set" del numero de telefono cambia puesto que nos queremos asegurar de que tiene 9 digitos.
         inline void setEmail(string email){email_=email;}
 
     //En las funciones denominadas como "get" se devolveran los datos del monitor de lsa variables principales.
