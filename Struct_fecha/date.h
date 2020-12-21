@@ -13,7 +13,7 @@ struct date{
     }
 
     friend std::ostream& operator<<(std::ostream& os, const date &f){
-        os<<f.dia<<"/"<<f.mes<<"/"<<f.year;
+        os<<f.dia<<","<<f.mes<<","<<f.year;
         return os;
     }
 };
