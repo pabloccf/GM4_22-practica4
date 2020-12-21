@@ -41,8 +41,7 @@ class Monitor{
             }
             
             numero_=numero;
-        }  
-           //La funcion "set" del numero de telefono cambia puesto que nos queremos asegurar de que tiene 9 digitos.
+        }  //La funcion "set" del numero de telefono cambia puesto que nos queremos asegurar de que tiene 9 digitos.
         inline void setEmail(string email){email_=email;}
 
     //En las funciones denominadas como "get" se devolveran los datos del monitor de lsa variables principales.
